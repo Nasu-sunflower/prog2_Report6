@@ -13,10 +13,31 @@ public class GirlFrend {
 
     //getter
     public String getName(){return this.name;}
-    public int getLovd(){return this.love;}
+    public int getLove(){return this.love;}
     public boolean getMarriage(){return this.marriage;}
 
-    public void doPresent(GirlFrend girlFrend,Present p){
-        
+    public void doPresent(GirlFrend girlFrend){
+        love -= 30;
+        if (love < 0){
+            marriage = true;
+            System.out.printf("%s:あなたとずっと一緒にいたいわ。\n", name);
+        }else{ System.out.printf("%s:うれしいわ。\n", name);}
+    }
+
+    public void talk(GirlFrend girlFrend){
+        love -= 20;
+        if (love < 0){
+            marriage = true;
+            System.out.printf("%s:あなたとずっと一緒にいたいわ。\n", name);
+        }else{ System.out.printf("%s:たのしいわ。\n", name);}
+    }
+
+    public void propose(GirlFrend girlFrend){
+        System.out.printf("僕と結婚してください！");
+        if(marriage = true){
+            System.out.printf("%s:よろこんで！\n", name);
+        }else{
+            System.out.printf("%s:あなたのことそういう風に見れないのごめんなさいね。\n", name);
+        }
     }
 }
