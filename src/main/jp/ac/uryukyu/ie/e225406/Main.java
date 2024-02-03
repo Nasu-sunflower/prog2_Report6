@@ -11,7 +11,7 @@ public class Main {
     int playHand;
     String input;
         
-    Scanner scanner = new Scanner(System.in); // scannerをここで初期化
+    Scanner scanner = new Scanner(System.in); // scannerをここで初期化している
 
     GirlFrend girlfrend = new GirlFrend("あつこ", 100, false);
 
