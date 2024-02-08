@@ -36,6 +36,11 @@ public class GirlFrend {
         }else{ 
             System.out.printf("%s:うれしいわ。\n", name);
         }
+        /**
+         * 指定された値loveを引いて、
+         * 指定された文字列をプリント
+         * love>0の場合分岐する。
+         */
     }
 
     public void talk(GirlFrend girlFrend){
@@ -49,6 +54,11 @@ public class GirlFrend {
         }else{ 
             System.out.printf("%s:たのしいわ。\n", name);
         }
+        /**
+         * 指定された値loveを引いて、
+         * 指定された文字列をプリント
+         * love>0の場合分岐する。
+         */
     }
 
     public void propose(GirlFrend girlFrend){
@@ -61,5 +71,10 @@ public class GirlFrend {
         }else{
             System.out.printf("%s:あなたのことそういう風に見れないのごめんなさいね。\n", name);
         }
+        /**
+         * loveの値によって分岐
+         * love>0の時結婚成功　marriage=true
+         * love<0の時結婚失敗　
+         */
     }
 }
