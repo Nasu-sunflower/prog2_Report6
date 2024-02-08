@@ -1,18 +1,33 @@
-## Getting Started
+# 結婚RTAゲーム
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 概要
+いち早く攻略対象の女の子と結婚することを目的としてゲーム
 
-## Folder Structure
+## プレイ方法
+- 攻略対象の女の子にプレゼントするか話しかけるかを毎日選択して行う。
+- どちらの方が好感度が上がるのかはわからない。
+- また、告白する選択肢も常にありはするが、好感度が一定以上ないと成功しないため、適当に告白すると時間ロスになる。
 
-The workspace contains two folders by default, where:
+- ヒント：好感度がある程度たまると女の子の様子が変わるとのことだ
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## クラス解説
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### GirlFrendクラス 
+#### GirlFrendメソッド
+- 攻略対象の女の子を生成する
+- 名前（String name）、結婚フラグ(boolean marriage)、愛を(int love)持つ。
+- 愛はプレゼントなどをあげることで減っていき、０以下になると結婚フラグがtrueになる。（愛がなくなると結婚は少しややこしいが実装の関係上こうなった。）
+#### doPresent
+- 女の子にプレゼントをあげる選択肢を選んだ際に実行され、指定値愛ポイントが減る。
+#### talk 
+- 女の子と話す選択肢を選んだ際に実行され、指定値愛ポイントが減る。
+#### propose
+- marriageがtrueの時結婚できる。falseの時は指定した文字列を出力。
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+-----
 
-## Dependency Management
+### Main　クラス　ゲームを進行するクラス
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+#### main 
+- ゲームを進行するクラス。
+- 標準入力を用いて選択肢を受け付ける。

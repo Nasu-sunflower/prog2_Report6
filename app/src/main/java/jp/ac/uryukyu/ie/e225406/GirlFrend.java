@@ -1,5 +1,10 @@
 package jp.ac.uryukyu.ie.e225406;
 
+/**
+ * GirlFrendクラス
+ * 攻略対象の女の子を作成するクラス
+ */
+
 public class GirlFrend {
 
     private String name;
@@ -11,6 +16,9 @@ public class GirlFrend {
         love = maximumlove;
         marriage = false;
     }
+    /**
+     * GirlFrendは名前と愛パラメーターと結婚フラグをもつ
+     */
 
     //getter
     public String getName(){return this.name;}

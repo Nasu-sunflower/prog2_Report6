@@ -10,6 +10,10 @@ plugins {
     application
 }
 
+tasks.getByName("run", JavaExec::class) {
+    standardInput = System.`in`
+}//標準入力受付のため追記
+
 java {                                      
     sourceCompatibility = JavaVersion.VERSION_17
 }//指示によって追記
@@ -40,6 +44,8 @@ application {
     // Define the main class for the application.
     mainClass.set("Main")
 }
+
+
 
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
